@@ -1,5 +1,3 @@
-## **layout: page title: Resume permalink: /resume/ description: Resume of Mohamed Fouad Fakhruldeen \- Senior Technical Project Manager & Trainer**
-
 # **Mohamed Fouad Fakhruldeen**
 
 **Consultant, Technical Trainer, Senior Programs & Project Manager | PMP®**
