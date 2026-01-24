@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Fouad Fakhruldeen - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Import Professional Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary: #1e293b; /* Slate 800 */
+            --secondary: #475569; /* Slate 600 */
+            --accent: #2563eb; /* Blue 600 */
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f3f4f6;
+            color: var(--primary);
+            line-height: 1.5;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+        }
+
+        .page {
+            background: white;
+            width: 210mm; /* A4 Width */
+            min-height: 297mm; /* A4 Height */
+            margin: 2rem auto;
+            padding: 12mm 15mm; /* Balanced margins */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        /* ATS-Safe Skill Pills */
+        .skill-pill {
+            display: inline-block;
+            background-color: #f8fafc;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem; /* 12px */
+            font-weight: 600;
+            color: var(--secondary);
+            margin: 2px;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Section Heading Style */
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+            margin-top: 16px;
+        }
+
+        .role-title {
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .company-name {
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        /* Print Optimization */
+        @media print {
+            body {
+                background: white;
+                margin: 0;
+            }
+            .page {
+                width: 100%;
+                margin: 0;
+                padding: 10mm; /* Slightly smaller padding for print */
+                box-shadow: none;
+                min-height: auto;
+            }
+            .no-print {
+                display: none !important;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            .skill-pill {
+                border: 1px solid #ccc;
+            }
+            /* Prevent awkward page breaks */
+            h2, h3, .experience-item, .training-item, .education-item {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Print Button (Hidden in PDF) -->
+    <div class="no-print fixed top-4 right-4 z-50 flex gap-2">
+        <button onclick="window.print()" class="bg-slate-800 hover:bg-slate-900 text-white font-bold py-2 px-6 rounded-full shadow-lg transition transform hover:scale-105 flex items-center gap-2 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            </svg>
+            Save as PDF
+        </button>
+    </div>
+
+    <!-- CV Page -->
+    <div class="page text-sm">
+        
+        <!-- HEADER -->
+        <header class="text-center mb-6">
+            <h1 class="text-3xl font-bold tracking-tight text-slate-900 mb-1">Mohamed Fouad Fakhruldeen</h1>
+            <div class="text-sm font-medium text-slate-600 mb-2">Consultant, Technical Trainer, Senior Programs & Project Manager <span class="text-slate-400">|</span> PMP®</div>
+            
+            <div class="text-slate-700 font-medium text-sm flex flex-wrap justify-center gap-3">
+                <span class="location address">6th of October, Egypt</span>
+                <span class="text-slate-300">|</span>
+                <a href="mailto:fakhruldeen@gmail.com" class="hover:text-blue-600">fakhruldeen@gmail.com</a>
+                <span class="text-slate-300">|</span>
+                <a href="tel:+201063323096" class="hover:text-blue-600 phone">+20 10 633 23 096</a>
+                <span class="text-slate-300">|</span>
+                <a href="https://fakhruldeen.github.io" class="hover:text-blue-600">fakhruldeen.github.io</a>
+            </div>
+        </header>
+
+        <!-- SUMMARY -->
+        <section class="mb-6">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="text-justify text-slate-700 leading-relaxed">
+                Senior Technical Project Manager with over 20 years of experience orchestrating end-to-end project lifecycles in Software, Data Science, AI, and Government sectors. Expert in Agile and Waterfall methodologies, with a proven track record of managing remote cross-functional teams across the Middle East, UAE, KSA, Egypt, Europe, UK, and US. Dual-competency in technical execution (Data Engineering, DevOps, Cloud, AI) and strategic leadership (PMO establishment, Resource Allocation, Stakeholder Management). Notably, I was one of the contributing participants to the PMBOK® Guide – 8th Edition. Seeking to leverage extensive experience in Digital Transformation, Business Analysis, and Stakeholder Management to drive organizational growth and innovation in a challenging senior leadership role.
+            </p>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="mb-6">
+            <h2 class="section-title">Professional Experience</h2>
+
+            <!-- Role 1 -->
+            <div class="mb-4 experience-item">
+                <div class="flex justify-between items-baseline border-b border-dashed border-slate-200 pb-1 mb-1">
+                    <div>
+                        <span class="role-title text-base">Program Management Office (PMO) Manager</span>
+                        <span class="mx-1 text-slate-400">|</span>
+                        <span class="company-name">IdaamCloud</span>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-500">June 2025 – Present</span>
+                </div>
+                <div class="text-xs text-slate-500 mb-1 italic">Remote, UAE & Belarus</div>
+                <ul class="list-disc list-outside ml-4 text-slate-700 space-y-0.5">
+                    <li>Establishing and optimizing PMO processes to streamline project execution across the organization.</li>
+                    <li>Managed several projects, including telehealth applications and HR solutions.</li>
+                    <li>Overseeing portfolio health, ensuring alignment with strategic business objectives and resource availability.</li>
+                </ul>
+            </div>
+
+            <!-- Role 2 -->
+            <div class="mb-4 experience-item">
+                <div class="flex justify-between items-baseline border-b border-dashed border-slate-200 pb-1 mb-1">
+                    <div>
+                        <span class="role-title text-base">AI Program Manager</span>
+                        <span class="mx-1 text-slate-400">|</span>
+                        <span class="company-name">Athar Academy</span>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-500">July 2025 – Present</span>
+                </div>
+                <div class="text-xs text-slate-500 mb-1 italic">Remote, London UK</div>
+                <ul class="list-disc list-outside ml-4 text-slate-700 space-y-0.5">
+                    <li>Leading the development and execution of Artificial Intelligence educational programs.</li>
+                    <li>Participated in delivering training in data analysis and project management.</li>
+                    <li>Coordinating with subject matter experts to design industry-relevant AI curricula.</li>
+                </ul>
+            </div>
+
+            <!-- Role 3 -->
+            <div class="mb-4 experience-item">
+                <div class="flex justify-between items-baseline border-b border-dashed border-slate-200 pb-1 mb-1">
+                    <div>
+                        <span class="role-title text-base">Senior Project Manager (AI Services)</span>
+                        <span class="mx-1 text-slate-400">|</span>
+                        <span class="company-name">Turing</span>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-500">Sep 2024 – June 2025</span>
+                </div>
+                <div class="text-xs text-slate-500 mb-1 italic">Remote, Palo Alto CA, USA</div>
+                <ul class="list-disc list-outside ml-4 text-slate-700 space-y-0.5">
+                    <li><strong>AI Implementation:</strong> Managed projects involving Multi-Modal Language Models (MMLLM), integrating text, image, and data modalities.</li>
+                    <li><strong>Prompt Engineering:</strong> Designed and refined AI prompts for various use cases, optimizing performance for machine learning models.</li>
+                    <li><strong>Remote Leadership:</strong> Managed distributed teams of developers and QA engineers via Agile methodologies.</li>
+                </ul>
+            </div>
+
+            <!-- Role 4 -->
+            <div class="mb-4 experience-item">
+                <div class="flex justify-between items-baseline border-b border-dashed border-slate-200 pb-1 mb-1">
+                    <div>
+                        <span class="role-title text-base">Programs / PM Officer</span>
+                        <span class="mx-1 text-slate-400">|</span>
+                        <span class="company-name">Tharaa</span>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-500">Jan 2024 – Present</span>
+                </div>
+                <div class="text-xs text-slate-500 mb-1 italic">Medina, KSA</div>
+                <ul class="list-disc list-outside ml-4 text-slate-700 space-y-0.5">
+                    <li>Overseeing training program lifecycles and ensuring quality delivery standards.</li>
+                    <li>Participated in delivering training in data analysis and project management.</li>
+                </ul>
+            </div>
+
+            <!-- Role 5 -->
+            <div class="mb-4 experience-item">
+                <div class="flex justify-between items-baseline border-b border-dashed border-slate-200 pb-1 mb-1">
+                    <div>
+                        <span class="role-title text-base">Senior Project Manager</span>
+                        <span class="mx-1 text-slate-400">|</span>
+                        <span class="company-name">MedSoft</span>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-500">Oct 2023 – Nov 2024</span>
+                </div>
+                <div class="text-xs text-slate-500 mb-1 italic">Remote, TMCMF Tennessee USA</div>
+                <ul class="list-disc list-outside ml-4 text-slate-700 space-y-0.5">
+                    <li>Coordinated between R&D, AI, and Software Development teams to deliver biomedical software solutions.</li>
+                    <li>Successfully delivered projects during the acquisition by Johnson & Johnson (J&J).</li>
+                    <li>Navigated complex medical regulatory landscapes to ensure software compliance.</li>
+                    <li>Applied Scrum and Kanban frameworks to streamline workflows, reducing delivery times.</li>
+                </ul>
+            </div>
+
+            <!-- Role 6 -->
+            <div class="mb-4 experience-item">
+                <div class="flex justify-between items-baseline border-b border-dashed border-slate-200 pb-1 mb-1">
+                    <div>
+                        <span class="role-title text-base">Data Engineering Project Manager</span>
+                        <span class="mx-1 text-slate-400">|</span>
+                        <span class="company-name">ADWAT Information Technology</span>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-500">April 2022 – Nov 2023</span>
+                </div>
+                <div class="text-xs text-slate-500 mb-1 italic">Riyadh, KSA</div>
+                <ul class="list-disc list-outside ml-4 text-slate-700 space-y-0.5">
+                    <li><strong>Riyadh Municipality Accidents Monitoring Center:</strong> Led the establishment of the data engineering pipeline and analytical dashboard.</li>
+                    <li>Oversaw data acquisition, transformation, and storage processes, ensuring scalability and accuracy.</li>
+                </ul>
+            </div>
+
+            <!-- Role 7 -->
+            <div class="mb-4 experience-item">
+                <div class="flex justify-between items-baseline border-b border-dashed border-slate-200 pb-1 mb-1">
+                    <div>
+                        <span class="role-title text-base">Project Manager (Data Projects)</span>
+                        <span class="mx-1 text-slate-400">|</span>
+                        <span class="company-name">HordeCore</span>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-500">Nov 2019 – Nov 2022</span>
+                </div>
+                <div class="text-xs text-slate-500 mb-1 italic">Remote</div>
+                <ul class="list-disc list-outside ml-4 text-slate-700 space-y-0.5">
+                    <li>Directed the development of a comprehensive data analytics pipeline for a 3D visualization startup.</li>
+                    <li>Collaborated with game developers and data scientists to integrate analytics into the game development workflow.</li>
+                </ul>
+            </div>
+
+            <!-- Role 8 -->
+            <div class="mb-4 experience-item">
+                <div class="flex justify-between items-baseline border-b border-dashed border-slate-200 pb-1 mb-1">
+                    <div>
+                        <span class="role-title text-base">Director of Technology</span>
+                        <span class="mx-1 text-slate-400">|</span>
+                        <span class="company-name">Arab Digital Expression (ADEF)</span>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-500">Jan 2019 – Oct 2019</span>
+                </div>
+                <div class="text-xs text-slate-500 mb-1 italic">Egypt</div>
+                <ul class="list-disc list-outside ml-4 text-slate-700 space-y-0.5">
+                    <li>Managed the organization’s technology roadmap and deployed digital platforms for NGO Sectors program management.</li>
+                </ul>
+            </div>
+
+            <!-- Role 9 -->
+            <div class="mb-4 experience-item">
+                <div class="flex justify-between items-baseline border-b border-dashed border-slate-200 pb-1 mb-1">
+                    <div>
+                        <span class="role-title text-base">Project Manager</span>
+                        <span class="mx-1 text-slate-400">|</span>
+                        <span class="company-name">Roads and Transport Authority (RTA)</span>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-500">Jan 2014 – Dec 2018</span>
+                </div>
+                <div class="text-xs text-slate-500 mb-1 italic">Dubai, UAE</div>
+                <ul class="list-disc list-outside ml-4 text-slate-700 space-y-0.5">
+                    <li>Managed the "Hala" mobile app development and Meter Unit (Android) deployment in Dubai.</li>
+                    <li>Collaborated with NYU Abu Dhabi to deliver a smart public transportation prediction system.</li>
+                    <li>Led the establishment of a state-of-the-art Dispatch Center (workforce ~250 employees).</li>
+                </ul>
+            </div>
+
+            <!-- Role 10 (Consolidated older roles) -->
+            <div class="mb-4 experience-item">
+                <div class="flex justify-between items-baseline border-b border-dashed border-slate-200 pb-1 mb-1">
+                    <div>
+                        <span class="role-title text-base">Backend Developer & Systems Engineer</span>
+                        <span class="mx-1 text-slate-400">|</span>
+                        <span class="company-name">Hoqook.com / Freelancer</span>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-500">2005 – 2013</span>
+                </div>
+                <div class="text-xs text-slate-500 mb-1 italic">Egypt</div>
+                <ul class="list-disc list-outside ml-4 text-slate-700 space-y-0.5">
+                    <li>Launching, developing and managing Hoqook.com news portal.</li>
+                    <li>Delivered PHP backend development and Linux system engineering solutions.</li>
+                </ul>
+            </div>
+        </section>
+
+ 
+
+        <!-- TRAINING EXP -->
+        <section class="mb-6">
+            <h2 class="section-title">Technical Training Experience</h2>
+            <div class="grid grid-cols-1 gap-3">
+                
+                <div class="training-item flex flex-col sm:flex-row justify-between sm:items-baseline border-l-2 border-slate-300 pl-3">
+                    <div>
+                        <div class="font-bold text-slate-800">Information Technology Institute (ITI)</div>
+                        <div class="text-slate-600">AI-Pro Program Cofounder & Instructor</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xs font-bold text-slate-500">Nov 2020 – Nov 2023</div>
+                        <div class="text-xs text-slate-400">Certified Trainer by EPITA</div>
+                    </div>
+                </div>
+
+                <div class="training-item flex flex-col sm:flex-row justify-between sm:items-baseline border-l-2 border-slate-300 pl-3">
+                    <div>
+                        <div class="font-bold text-slate-800">Red Hat Academy (Creativa)</div>
+                        <div class="text-slate-600">Red Hat Academy Trainer</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xs font-bold text-slate-500">May 2022 – May 2024</div>
+                    </div>
+                </div>
+
+                <div class="training-item flex flex-col sm:flex-row justify-between sm:items-baseline border-l-2 border-slate-300 pl-3">
+                    <div>
+                        <div class="font-bold text-slate-800">Athar Academy / Tharaa</div>
+                        <div class="text-slate-600">Trainer (Project Mgmt & Data Analysis)</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xs font-bold text-slate-500">May 2023 – Present</div>
+                    </div>
+                </div>
+
+                <div class="training-item flex flex-col sm:flex-row justify-between sm:items-baseline border-l-2 border-slate-300 pl-3">
+                    <div>
+                        <div class="font-bold text-slate-800">Learning Space / Future Skills / Tuwaiq</div>
+                        <div class="text-slate-600">Technical Trainer (Linux, Python, PM)</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xs font-bold text-slate-500">Nov 2021 – May 2023</div>
+                        <div class="text-xs text-slate-400">KSA (Remote/On-site)</div>
+                    </div>
+                </div>
+
+                <div class="training-item flex flex-col sm:flex-row justify-between sm:items-baseline border-l-2 border-slate-300 pl-3">
+                    <div>
+                        <div class="font-bold text-slate-800">Sprints.AI</div>
+                        <div class="text-slate-600">Technical Trainer (DevOps, AI)</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xs font-bold text-slate-500">Jun 2020 – Oct 2023</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="mb-6">
+            <h2 class="section-title">Education</h2>
+            <div class="space-y-3">
+                <div class="education-item flex justify-between">
+                    <div>
+                        <div class="font-bold text-slate-900">MBA (Master in Business Administration - Strategy)</div>
+                        <div class="text-slate-700 text-sm">Arab Academy for Science, Technology and Maritime Transport (AAST), Smart Village, Egypt</div>
+                    </div>
+                    <div class="text-right text-xs text-slate-500 font-semibold">Spring 2025 – Present</div>
+                </div>
+                <div class="education-item flex justify-between">
+                    <div>
+                        <div class="font-bold text-slate-900">M.Sc. Data Science (MLOps & Data Engineering)</div>
+                        <div class="text-slate-700 text-sm">Faculty of Graduate Studies for Statistical Research (FGSSR), Cairo University, Egypt</div>
+                    </div>
+                    <div class="text-right text-xs text-slate-500 font-semibold">Sep 2024 – Present</div>
+                </div>
+                <div class="education-item flex justify-between">
+                    <div>
+                        <div class="font-bold text-slate-900">Pre-Master, Computer Science & Data Science</div>
+                        <div class="text-slate-700 text-sm">FGSSR, Cairo University | <span class="italic text-slate-500">Grade: Very Good (Top of Class)</span></div>
+                    </div>
+                    <div class="text-right text-xs text-slate-500 font-semibold">2021 – 2023</div>
+                </div>
+                <div class="education-item flex justify-between">
+                    <div>
+                        <div class="font-bold text-slate-900">Postgraduate Diploma, Computer Science</div>
+                        <div class="text-slate-700 text-sm">FGSSR, Cairo University | <span class="italic text-slate-500">Grade: Very Good (GPA 3.6/4)</span></div>
+                    </div>
+                    <div class="text-right text-xs text-slate-500 font-semibold">2018 – 2020</div>
+                </div>
+                <div class="education-item flex justify-between">
+                    <div>
+                        <div class="font-bold text-slate-900">Bachelor's Degree, Mass Communication</div>
+                        <div class="text-slate-700 text-sm">Faculty of Mass Communications, Cairo University, Egypt</div>
+                    </div>
+                    <div class="text-right text-xs text-slate-500 font-semibold">2009 – 2013</div>
+                </div>
+            </div>
+        </section>
+       <!-- CORE COMPETENCIES -->
+        <section class="mb-6">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="grid grid-cols-1 gap-2 text-xs sm:text-sm">
+                
+                <div class="flex flex-col sm:flex-row gap-2 items-start sm:items-center">
+                    <span class="w-36 font-bold text-slate-800 shrink-0">Management:</span>
+                    <div class="flex flex-wrap">
+                        <span class="skill-pill">PMP</span>
+                        <span class="skill-pill">Agile (Scrum, Kanban)</span>
+                        <span class="skill-pill">PMO Setup</span>
+                        <span class="skill-pill">Project Lifecycles</span>
+                        <span class="skill-pill">Portfolio Management</span>
+                        <span class="skill-pill">Risk Management</span>
+                        <span class="skill-pill">Stakeholder Management</span>
+                        <span class="skill-pill">Strategic Planning</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-2 items-start sm:items-center">
+                    <span class="w-36 font-bold text-slate-800 shrink-0">Technical Domain:</span>
+                    <div class="flex flex-wrap">
+                        <span class="skill-pill">Data Science</span>
+                        <span class="skill-pill">AI/ML (LLMs)</span>
+                        <span class="skill-pill">Prompt Engineering</span>
+                        <span class="skill-pill">MLOps</span>
+                        <span class="skill-pill">Data Pipelines</span>
+                        <span class="skill-pill">Cloud (Azure, AWS)</span>
+                        <span class="skill-pill">DevOps</span>
+                        <span class="skill-pill">Biomedical Solutions</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-2 items-start sm:items-center">
+                    <span class="w-36 font-bold text-slate-800 shrink-0">Tools & Tech:</span>
+                    <div class="flex flex-wrap">
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">Pandas/NumPy</span>
+                        <span class="skill-pill">PySpark</span>
+                        <span class="skill-pill">Linux/Bash</span>
+                        <span class="skill-pill">Docker/K8s</span>
+                        <span class="skill-pill">Ansible</span>
+                        <span class="skill-pill">Jira</span>
+                        <span class="skill-pill">MS Project</span>
+                        <span class="skill-pill">Tableau</span>
+                        <span class="skill-pill">SQL</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-2 items-start sm:items-center">
+                    <span class="w-36 font-bold text-slate-800 shrink-0">Soft Skills:</span>
+                    <div class="flex flex-wrap">
+                        <span class="skill-pill">Leadership</span>
+                        <span class="skill-pill">Remote Team Management</span>
+                        <span class="skill-pill">Conflict Resolution</span>
+                        <span class="skill-pill">Public Speaking</span>
+                        <span class="skill-pill">Curriculum Development</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- CERTIFICATIONS & LANGUAGES -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <section class="mb-4">
+                <h2 class="section-title">Certifications</h2>
+                <div class="text-sm text-slate-700 space-y-1">
+                    <div class="flex items-center gap-2"><span>•</span> <strong>PMP®</strong> (Project Management Professional)</div>
+                    <div class="flex items-center gap-2"><span>•</span> <strong>MCT</strong> (Microsoft Certified Trainer)</div>
+                    <div class="flex items-center gap-2"><span>•</span> <strong>MCSE</strong> (Cloud Platform & Infrastructure)</div>
+                    <div class="flex items-center gap-2"><span>•</span> <strong>MCSA</strong> (Microsoft Certified Solutions Associate)</div>
+                    <div class="flex items-center gap-2"><span>•</span> <strong>RHCE</strong> (Red Hat Certified Engineer)</div>
+                    <div class="flex items-center gap-2"><span>•</span> <strong>Practical Gen AI for PMs</strong></div>
+                    <div class="flex items-center gap-2"><span>•</span> <strong>TTT</strong> (Train The Teacher EPITA, France)</div>
+                </div>
+            </section>
+            
+            <section class="mb-4">
+                <h2 class="section-title">Languages</h2>
+                    <div class="pl-2">Arabic (Native) / English (C1/Professional)</div>
+                <h2 class="section-title">info</h2>
+                    <div class="pl-2">• Nationality: Egyptian</div>
+                    <div class="pl-2">• Marital Status: Married</div>
+                    <div class="pl-2">• Year of Birth: 1982</div>
+            </section>
+        </div>
+
+    </div>
+
+</body>
+</html>
