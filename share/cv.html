@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Fouad Fakhruldeen - Executive Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Import Professional Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary: #1e293b; /* Slate 800 */
+            --secondary: #475569; /* Slate 600 */
+            --accent: #2563eb; /* Blue 600 */
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f3f4f6;
+            color: var(--primary);
+            line-height: 1.6;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+        }
+
+        .page {
+            background: white;
+            width: 210mm; /* A4 Width */
+            min-height: 297mm; /* A4 Height */
+            margin: 2rem auto;
+            padding: 12mm 15mm; /* Balanced margins */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        /* ATS-Safe Skill Pills */
+        .skill-pill {
+            display: inline-block;
+            background-color: #f8fafc;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem; /* 12px */
+            font-weight: 600;
+            color: var(--secondary);
+            margin: 2px;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Section Heading Style */
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+            margin-top: 16px;
+        }
+
+        .category-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: block;
+            border-left: 3px solid var(--accent);
+            padding-left: 8px;
+        }
+
+        /* Print Optimization */
+        @media print {
+            body {
+                background: white;
+                margin: 0;
+            }
+            .page {
+                width: 100%;
+                margin: 0;
+                padding: 10mm;
+                box-shadow: none;
+                min-height: auto;
+            }
+            .no-print {
+                display: none !important;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            .skill-pill {
+                border: 1px solid #ccc;
+            }
+            h2, h3, .achievement-item, .education-item {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Print Button -->
+    <div class="no-print fixed top-4 right-4 z-50 flex gap-2">
+        <button onclick="window.print()" class="bg-slate-800 hover:bg-slate-900 text-white font-bold py-2 px-6 rounded-full shadow-lg transition transform hover:scale-105 flex items-center gap-2 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            </svg>
+            Save as PDF
+        </button>
+    </div>
+
+    <!-- CV Page -->
+    <div class="page text-sm">
+        
+        <!-- HEADER -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-bold tracking-tight text-slate-900 mb-1">Mohamed Fouad Fakhruldeen</h1>
+            <div class="text-sm font-medium text-slate-600 mb-3">Consultant, Technical Trainer, Senior Programs & Project Manager <span class="text-slate-400">|</span> PMP®</div>
+            
+            <div class="text-slate-700 font-medium text-sm flex flex-wrap justify-center gap-3">
+                <span>6th of October, Egypt</span>
+                <span class="text-slate-300">|</span>
+                <a href="mailto:fakhruldeen@gmail.com" class="hover:text-blue-600">fakhruldeen@gmail.com</a>
+                <span class="text-slate-300">|</span>
+                <a href="tel:+201063323096" class="hover:text-blue-600">+20 10 633 23 096</a>
+                <span class="text-slate-300">|</span>
+                <a href="https://fakhruldeen.github.io" class="hover:text-blue-600">fakhruldeen.github.io</a>
+                <span class="text-slate-300">|</span>
+                <a href="https://linkedin.com/in/fakhruldeen" class="hover:text-blue-600">linkedin.com/in/fakhruldeen</a>
+            </div>
+        </header>
+
+        <!-- EXECUTIVE SUMMARY -->
+        <section class="mb-6">
+            <h2 class="section-title">Executive Summary</h2>
+            <p class="text-justify text-slate-700 leading-relaxed mb-4">
+                Senior Technical Project Manager with over 20 years of experience managing and orchestrating project lifecycles in Software, Data Science, and Artificial Intelligence (AI) sectors. A seasoned expert in <strong>Agile</strong> and <strong>Waterfall</strong> methodologies, with a proven track record of leading remote and distributed teams across the Middle East, Europe, and the US.
+            </p>
+            <p class="text-justify text-slate-700 leading-relaxed mb-4">
+                I possess a rare <strong>dual competency</strong> combining:
+            </p>
+            <ol class="list-decimal list-inside ml-4 text-slate-700 space-y-1 mb-4">
+                <li><strong>Deep Technical Expertise:</strong> In Data Engineering, DevOps, and Artificial Intelligence.</li>
+                <li><strong>Strategic Leadership:</strong> In PMO establishment, Strategic Planning, and Stakeholder Management.</li>
+            </ol>
+            <p class="text-slate-700 font-medium">
+                Notably, I am a contributing participant to the <strong>PMBOK® Guide – 8th Edition</strong>.
+            </p>
+        </section>
+
+        <!-- AREAS OF EXPERTISE -->
+        <section class="mb-6">
+            <h2 class="section-title">Areas of Expertise & Core Competencies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                
+                <!-- Management & Strategy -->
+                <div>
+                    <span class="category-title">Management & Strategy</span>
+                    <ul class="list-disc list-outside ml-4 text-slate-700 space-y-1">
+                        <li>PMP® & Agile (Scrum, Kanban)</li>
+                        <li>PMO Establishment & Process Optimization</li>
+                        <li>Risk & Stakeholder Management</li>
+                        <li>Strategic Planning & Portfolio Management</li>
+                    </ul>
+                </div>
+
+                <!-- Technical Expertise -->
+                <div>
+                    <span class="category-title">Technical Expertise</span>
+                    <ul class="list-disc list-outside ml-4 text-slate-700 space-y-1">
+                        <li>Data Science & AI/ML</li>
+                        <li>LLMs & Prompt Engineering</li>
+                        <li>MLOps & Data Engineering</li>
+                        <li>Cloud (Azure, AWS) & DevOps</li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div>
+                    <span class="category-title">Tools & Technologies</span>
+                    <div class="flex flex-wrap gap-1 mt-1">
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">Pandas/NumPy</span>
+                        <span class="skill-pill">PySpark</span>
+                        <span class="skill-pill">SQL</span>
+                        <span class="skill-pill">Docker</span>
+                        <span class="skill-pill">Kubernetes (K8s)</span>
+                        <span class="skill-pill">Linux/Bash</span>
+                        <span class="skill-pill">Jira</span>
+                        <span class="skill-pill">MS Project</span>
+                        <span class="skill-pill">Tableau</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- KEY ACHIEVEMENTS -->
+        <section class="mb-6">
+            <h2 class="section-title">Key Professional Achievements</h2>
+            <div class="space-y-4">
+                
+                <div class="achievement-item">
+                    <div class="font-bold text-slate-800 mb-1">• AI Program Management</div>
+                    <div class="text-slate-700 pl-4 border-l-2 border-slate-200">
+                        Led the development of advanced AI educational programs and managed Multi-Modal Language Models (MMLLM) projects with global entities like <strong>Turing</strong> and <strong>Athar Academy</strong>.
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="font-bold text-slate-800 mb-1">• PMO Establishment</div>
+                    <div class="text-slate-700 pl-4 border-l-2 border-slate-200">
+                        Established and optimized PMO processes to streamline execution at <strong>IdaamCloud</strong>.
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="font-bold text-slate-800 mb-1">• Complex Project Delivery</div>
+                    <div class="text-slate-700 pl-4 border-l-2 border-slate-200">
+                        Managed R&D teams to successfully deliver biomedical software during the acquisition of <strong>MedSoft</strong> projects by <strong>Johnson & Johnson</strong>.
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="font-bold text-slate-800 mb-1">• Major Government Projects</div>
+                    <div class="text-slate-700 pl-4 border-l-2 border-slate-200">
+                        Led the establishment of the data pipeline for the Riyadh Municipality Accidents Monitoring Center, and managed strategic projects for the <strong>RTA</strong> in Dubai, including the "Hala" app and Dispatch Center.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EDUCATION & CERTIFICATIONS -->
+        <section class="mb-6">
+            <h2 class="section-title">Education & Certifications</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Education Column -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-slate-800 text-sm uppercase tracking-wide border-b border-slate-200 pb-1 mb-2">Education</h3>
+                    
+                    <div class="education-item">
+                        <div class="font-bold text-slate-900">MBA (Strategy)</div>
+                        <div class="text-xs text-slate-500">Arab Academy (AAST) | <span class="italic">In Progress</span></div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="font-bold text-slate-900">M.Sc. Data Science (MLOps & Data Eng.)</div>
+                        <div class="text-xs text-slate-500">Cairo University | <span class="italic">In Progress</span></div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="font-bold text-slate-900">Pre-Master & PG Diploma (CS)</div>
+                        <div class="text-xs text-slate-500">Cairo University</div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="font-bold text-slate-900">Bachelor's Degree, Mass Communication</div>
+                        <div class="text-xs text-slate-500">Cairo University</div>
+                    </div>
+                </div>
+
+                <!-- Certifications Column -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-slate-800 text-sm uppercase tracking-wide border-b border-slate-200 pb-1 mb-2">Professional Certifications</h3>
+                    <ul class="text-sm text-slate-700 space-y-2">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <strong>PMP®</strong> (Project Management Professional)
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <strong>MCT</strong> (Microsoft Certified Trainer)
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <strong>MCSE</strong> (Cloud Platform & Infrastructure)
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <strong>RHCE</strong> (Red Hat Certified Engineer)
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Practical Gen AI for PMs & TTT (EPITA)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
