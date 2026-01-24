@@ -1,3 +1,8 @@
+---
+layout: default
+title: About Me
+---
+
 # **Mohamed Fouad Fakhruldeen**
 
 **Consultant, Technical Trainer, Senior Programs & Project Manager | PMP®**
