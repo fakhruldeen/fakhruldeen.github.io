@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles - Light Theme Background */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(135deg, #f4edea 0%, #c5d8d1 100%);
+    min-height: 100vh;
+    transition: background 0.5s ease;
+}
+
+/* Arabic Font Override */
+body.font-arabic {
+    font-family: 'Tajawal', sans-serif !important;
+}
+
+/* Dark mode overrides - Dark Theme Background */
+html.dark body {
+    background: linear-gradient(135deg, #09131d 0%, #12263a 100%);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px 0 rgba(18, 38, 58, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+}
+
+/* Dark mode glass card */
+html.dark .glass-card {
+    background: rgba(18, 38, 58, 0.75);
+    border-color: rgba(6, 188, 193, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.action-btn {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.action-btn:active {
+    transform: scale(0.95);
+}
+
+/* Custom scrollbar for better mobile feel */
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
