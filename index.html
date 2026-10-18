@@ -392,8 +392,8 @@
                     </a>
                 </div>
 
-                <!-- Row 2: Socials (25% width each, no labels) -->
-                <!-- dir="ltr" ensures icons stay in the same order (LinkedIn -> X -> WhatsApp -> Telegram) -->
+                <!-- Row 2: Socials (20% width each, no labels) -->
+                <!-- dir="ltr" ensures icons stay in the same order (LinkedIn -> X -> WhatsApp -> Telegram -> GitHub) -->
                 <div class="flex w-full gap-2" dir="ltr">
                     <!-- LinkedIn -->
                     <a href="https://www.linkedin.com/in/fakhruldeen" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="flex-1 flex items-center justify-center py-3 bg-white/60 dark:bg-white/5 border border-white dark:border-white/10 rounded-xl shadow-sm hover:shadow-md dark:hover:bg-white/10 transition-all group">
@@ -420,6 +420,13 @@
                     <a href="https://t.me/FOU4d" target="_blank" rel="noopener noreferrer" aria-label="Telegram Message" class="flex-1 flex items-center justify-center py-3 bg-white/60 dark:bg-white/5 border border-white dark:border-white/10 rounded-xl shadow-sm hover:shadow-md dark:hover:bg-white/10 transition-all group">
                         <div class="text-deep-space-blue dark:text-soft-apricot text-xl group-hover:scale-110 transition-transform">
                             <i class="fab fa-telegram-plane"></i>
+                        </div>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/fakhruldeen" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="flex-1 flex items-center justify-center py-3 bg-white/60 dark:bg-white/5 border border-white dark:border-white/10 rounded-xl shadow-sm hover:shadow-md dark:hover:bg-white/10 transition-all group">
+                        <div class="text-deep-space-blue dark:text-parchment text-xl group-hover:scale-110 transition-transform">
+                            <i class="fab fa-github"></i>
                         </div>
                     </a>
                 </div>
@@ -636,7 +643,8 @@
             whatsapp: "https://wa.me/m.fouad.fakhr",
             whatsappUsername: "@m.fouad.fakhr",
             linkedin: "https://www.linkedin.com/in/fakhruldeen",
-            telegram: "https://t.me/FOU4d"
+            telegram: "https://t.me/FOU4d",
+            github: "https://github.com/fakhruldeen"
         };
 
         function setElementText(id, text) {
@@ -778,10 +786,12 @@
                 `URL;TYPE=X:${commonData.x}`,
                 `URL;TYPE=WhatsApp:${commonData.whatsapp}`,
                 `URL;TYPE=LinkedIn:${commonData.linkedin}`,
+                `URL;TYPE=GitHub:${commonData.github}`,
                 `X-SOCIALPROFILE;TYPE=twitter;x-user=fakhruldeen:${commonData.x}`,
                 `X-SOCIALPROFILE;TYPE=whatsapp;x-user=m.fouad.fakhr:${commonData.whatsapp}`,
                 `X-SOCIALPROFILE;TYPE=linkedin:${commonData.linkedin}`,
                 `X-SOCIALPROFILE;TYPE=telegram;x-user=FOU4d:${commonData.telegram}`,
+                `X-SOCIALPROFILE;TYPE=github;x-user=fakhruldeen:${commonData.github}`,
                 `NOTE;CHARSET=UTF-8:${lang === 'ar' ? 'واتساب: @m.fouad.fakhr\\nتويتر / X: @fakhruldeen' : 'WhatsApp: @m.fouad.fakhr\\nX: @fakhruldeen'}`,
                 "END:VCARD"
             ].join("\n");
