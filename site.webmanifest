@@ -1,0 +1,21 @@
+{
+  "name": "Mohamed Fouad Fakhruldeen",
+  "short_name": "Fakhruldeen",
+  "description": "Technical Programs Manager, Trainer & Consultant",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#12263a",
+  "theme_color": "#12263a",
+  "icons": [
+    {
+      "src": "/img/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

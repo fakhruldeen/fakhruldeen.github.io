@@ -9,19 +9,20 @@ author:
   full_name: "Mohamed Fouad Fakhruldeen"
   job_title: "Technical Programs Manager, Trainer & Consultant"
   bio: "Helping businesses scale through innovative digital solutions and strategic planning."
-  avatar_url: "https://api.dicebear.com/7.x/initials/svg?seed=MF&backgroundColor=12263a&textColor=f4edea"
-  logo_url: "https://placehold.co/100x100/12263a/f4edea?text=LOGO" # Placeholder for your bottom logo
+  avatar_url: "/img/fakhr-sm.jpg"
+  logo_url: "/img/favicon-512x512.png"
   
   # Contact Links
   mobile: "+201063323096"
   email: "fakhruldeen@gmail.com"
-  website: "https://fakhruldeen.github.io"
+  website: "https://fakhr.me"
   
   # Social Handles / URLs
-  whatsapp_number: "201063323096" # No + symbol for wa.me links usually
+  whatsapp_username: "@m.fouad.fakhr"
+  whatsapp_url: "https://wa.me/m.fouad.fakhr"
   calendar_url: "https://calendar.app.google/SBbpzivzwDckRxbK6"
   linkedin_url: "https://www.linkedin.com/in/fakhruldeen"
-  twitter_url: "https://x.com/_DE3N"
+  twitter_url: "https://x.com/fakhruldeen"
   telegram_url: "https://t.me/FOU4d"
 
 # Theme Colors (Deep Space & Apricot Palette)
